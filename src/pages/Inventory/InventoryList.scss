@@ -1,0 +1,14 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.inventory {
+    &__title {
+        margin: 0.5rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    &__list {
+        padding: 0 1rem;
+        margin: 0;
+    }
+}
