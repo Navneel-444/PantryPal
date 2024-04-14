@@ -1,32 +1,43 @@
 import "./ManualAdd.scss"
 import add from "../../assets/icons/add-icon.svg"
 import { useState } from "react";
-export default function ManualAdd() {
+import axios from "axios";
 
-    const [groceryItem, setGorceryItem] = useState("")
-    const [quantity, setQuantity] = useState("")
+export default function ManualAdd({ pantry }) {
 
-    const handleGroceryItem = (event) => {
-        setGorceryItem(event.target.value)
+    const [pantryItem, setPantryItem] = useState("")
+    const [pantryQuantity, setPantryQuantity] = useState("")
+
+    const handlepantryItem = (event) => {
+        setPantryItem(event.target.value)
     }
     const handleQuantity = (event) => {
-        setQuantity(event.target.value)
+        setPantryQuantity(event.target.value)
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        console.log(quantity);
-        console.log(groceryItem);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setPantryItem("");
+        setPantryQuantity("")
+        try {
+            const reponse = await axios.post(`http://localhost:8080/${pantry}`, {
+                item: pantryItem,
+                quantity: pantryQuantity
+            })
+        } catch (error) {
+            console.error('error item not added', error)
+        }
     }
+
     return (
         <>
             <h4 className="add__title">Manual Add</h4>
             <form className="add" onSubmit={handleSubmit}>
                 <section className="add__container">
-                    <input onChange={handleGroceryItem} value={groceryItem} id="item" type="text" className="add__name" placeholder="Grocery Item" />
+                    <input onChange={handlepantryItem} value={pantryItem} id="item" type="text" className="add__name" placeholder="Grocery Item" />
                 </section>
                 <section className="add__container">
-                    <input onChange={handleQuantity} value={quantity} type="number" className="add__quantity" placeholder="QTY" />
+                    <input onChange={handleQuantity} value={pantryQuantity} type="number" className="add__quantity" placeholder="QTY" />
                 </section>
                 <button className="add__btn" type="submit"><img src={add} alt="add button for manual entry for gorcery list" className="add__icon" /></button>
             </form >
