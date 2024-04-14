@@ -1,11 +1,12 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/variables" as *;
 
-.inventory-item {
+.list-item {
     display: flex;
     justify-content: space-between;
     border: black solid 1px;
     border-radius: 5px;
+    margin: 0 1rem;
 
     &__container {
         display: flex;
@@ -21,12 +22,13 @@
     }
 
     &__quantity {
-        padding: 0.5rem
+        padding: 0.25rem;
+        margin-right: 0.25rem;
     }
 
     &__title {
         margin: 0;
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 
     &__qty {
@@ -37,7 +39,7 @@
 
     &__btn {
         padding: 0;
-        margin: 0.25rem;
+        margin-left: 0.25rem;
         height: 2rem;
         width: 2rem;
         display: flex;

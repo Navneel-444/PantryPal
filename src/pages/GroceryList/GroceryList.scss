@@ -1,0 +1,15 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+
+.grocery {
+    &__title {
+        @include mobile-padding;
+        margin: 1.5rem 0 0.5rem 0;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+    }
+}
