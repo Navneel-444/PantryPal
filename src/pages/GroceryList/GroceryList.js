@@ -10,9 +10,6 @@ export default function GroceryList() {
             <Pantrytabs />
             <h1 className="grocery__title">Grocery List</h1>
             <ManualAdd pantry={grocery} />
-            <ul className="grocery__list">
-                <ListItem />
-            </ul>
         </main>
     )
 }
