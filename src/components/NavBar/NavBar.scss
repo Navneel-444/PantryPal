@@ -1,0 +1,31 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+header {
+    background-color: $background-grey;
+    padding: 1rem 0;
+}
+
+.nav-bar {
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        color: $primary-white;
+        padding: 1rem;
+        margin: 0 1rem;
+    }
+
+    &__item:hover {
+        background-color: $primary-green;
+
+    }
+
+}
