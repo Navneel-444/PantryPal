@@ -6,7 +6,7 @@ import InventoryListPage from './pages/Inventory/InventoryList';
 function App() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/iventorylist" element={<InventoryListPage />}></Route>
