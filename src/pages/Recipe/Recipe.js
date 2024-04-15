@@ -18,7 +18,6 @@ export default function RecipePage() {
             }
         }
         getRecipes()
-        console.log(recipes);
     }, [])
 
     return (
