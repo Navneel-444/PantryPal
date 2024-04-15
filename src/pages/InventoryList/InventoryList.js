@@ -1,5 +1,4 @@
 import "./InventoryList.scss";
-import InventoryItem from '../../components/ListItem/ListItem';
 import PantryTab from "../../components/PantryTabs/PantryTabs";
 import ManualAdd from "../../components/ManualAdd/ManualAdd";
 
