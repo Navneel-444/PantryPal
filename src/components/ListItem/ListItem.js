@@ -18,7 +18,7 @@ export default function ListItem(grocery, tab) {
     const handleDelete = async () => {
         try {
             window.location.reload();
-            await axios.delete(`http://localhost:8080/${id}`);
+            await axios.delete(`http://localhost:8080/grocery/${id}`);
         } catch (error) {
             console.error(error);
         }
@@ -26,7 +26,7 @@ export default function ListItem(grocery, tab) {
     const handleEdit = async () => {
         try {
             window.location.reload();
-            await axios.put(`http://localhost:8080/${id}`, {
+            await axios.put(`http://localhost:8080/grocery/${id}`, {
                 id: id,
                 item: pantryItem,
                 quantity: pantryQuantity

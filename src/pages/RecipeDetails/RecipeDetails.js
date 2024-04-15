@@ -20,16 +20,31 @@ export default function RecipeDetailsPage() {
         getRecipeDetails()
     }, [])
 
-    console.log(details);
     if (!details) {
         return <p>Loading</p>;
     }
 
     return (
         <>
-            <section className="details__name">{details.title}</section>
-            <img src={details.image} alt="" />
+            <h1 className="details__name">{details.title}</h1>
             <p>{details.extendedIngredients.length}</p>
+            <img src={details.image} alt="" />
+            <h4 className="details__ingredients">Ingredients List:</h4>
+            <ul className="details__list">
+                {details.extendedIngredients?.map((item) => {
+                    return (
+                        <li className="details__item">{item.name}</li>
+                    )
+                })}
+            </ul>
+            <h4 className="details__ingredients">Procedure:</h4>
+            <ol className="details__steps">
+                {details.analyzedInstructions[0].steps?.map((steps) => {
+                    return (
+                        <li className="details__item">{steps.step}</li>
+                    )
+                })}
+            </ol>
         </>
     )
 }

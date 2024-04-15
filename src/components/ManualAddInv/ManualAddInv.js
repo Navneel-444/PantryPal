@@ -2,7 +2,7 @@ import "./ManualAddInv.scss"
 import add from "../../assets/icons/add-icon.svg"
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ListItem from "../ListItem/ListItem";
+import ListItem from "../ListItemInv/ListItemInv";
 
 export default function ManualAddInv({ pantry }) {
 

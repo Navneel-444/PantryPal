@@ -1,10 +1,10 @@
-import "./ListItem.scss";
+import "./ListItemInv.scss";
 import editbtn from "../../assets/icons/edit-icon.svg";
 import deletebtn from "../../assets/icons/delete-icon.svg"
 import axios from "axios";
 import { useState } from "react";
 
-export default function ListItemInv(grocery, tab) {
+export default function ListItemInv(grocery) {
     const id = `${grocery.grocery.id}`;
     const [pantryItem, setPantryItem] = useState("")
     const [pantryQuantity, setPantryQuantity] = useState("")
