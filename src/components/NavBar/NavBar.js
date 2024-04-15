@@ -1,17 +1,14 @@
-import { useState } from "react"
-import "./NavBar.scss"
+import "./NavBar.scss";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
-    const [currentPage, setCurrentPage] = useState("dashboard")
-
-
     return (
         <nav className="nav-bar">
             <ul className="nav-bar__list">
-                <li className="nav-bar__item">Recipes</li>
-                <li className="nav-bar__item">Dashboard</li>
-                <li className="nav-bar__item">Pantry</li>
+                <li><NavLink className="nav-bar__item" to="/recipes">Recipes</NavLink></li>
+                <li><NavLink className="nav-bar__item" to="/dashboard">Dashboard</NavLink></li>
+                <li><NavLink className="nav-bar__item" to="/grocery">Pantry</NavLink></li>
             </ul>
         </nav>
-    )
+    );
 }

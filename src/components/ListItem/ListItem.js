@@ -4,10 +4,10 @@ import deletebtn from "../../assets/icons/delete-icon.svg"
 import axios from "axios";
 import { useState } from "react";
 
-export default function ListItem(grocery) {
+export default function ListItem(grocery, tab) {
     const id = `${grocery.grocery.id}`;
-    const [pantryItem, setPantryItem] = useState("")
-    const [pantryQuantity, setPantryQuantity] = useState("")
+    const [pantryItem, setPantryItem] = useState(grocery.grocery.item)
+    const [pantryQuantity, setPantryQuantity] = useState(grocery.grocery.quantity)
 
 
     const handlepantryItem = (event) => {
@@ -19,7 +19,7 @@ export default function ListItem(grocery) {
     const handleDelete = async () => {
         try {
             window.location.reload();
-            await axios.delete(`http://localhost:8080/grocery/${id}`);
+            await axios.delete(`http://localhost:8080/${id}`);
         } catch (error) {
             console.error(error);
         }
@@ -27,7 +27,7 @@ export default function ListItem(grocery) {
     const handleEdit = async () => {
         try {
             window.location.reload();
-            await axios.put(`http://localhost:8080/grocery/${id}`, {
+            await axios.put(`http://localhost:8080/${id}`, {
                 id: id,
                 item: pantryItem,
                 quantity: pantryQuantity
@@ -41,12 +41,12 @@ export default function ListItem(grocery) {
         <form onSubmit={handleEdit}>
             <li className="list-item" key={grocery.grocery.id}>
                 <section className="list-item__container">
-                    <input onChange={handlepantryItem} value={pantryItem} type="text" className="list-item__name" placeholder={grocery.grocery.item} />
+                    <input onChange={handlepantryItem} value={pantryItem} type="text" className="list-item__name" placeholder={pantryItem} />
                 </section>
                 <section className="list-item__container">
                     <section className="list-item__quantity">
                         <h4 className="list-item__title">QTY:</h4>
-                        <input onChange={handleQuantity} value={pantryQuantity} type="number" className="list-item__qty" placeholder={grocery.grocery.quantity} />
+                        <input onChange={handleQuantity} value={pantryQuantity} type="number" className="list-item__qty" placeholder={pantryQuantity} />
                     </section>
                     <button type="submit" className="list-item__btn"><img src={editbtn} alt="edit button for list item" className="list-item__icon" /></button>
                     <button onClick={handleDelete} className="list-item__btn"> <img src={deletebtn} alt="delete button from list item" className="list-item__icon" /></button>
