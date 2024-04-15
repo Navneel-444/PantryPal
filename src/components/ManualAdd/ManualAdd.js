@@ -5,7 +5,6 @@ import axios from "axios";
 import ListItem from "../ListItem/ListItem";
 
 export default function ManualAdd({ pantry }) {
-
     const [pantryItem, setPantryItem] = useState("")
     const [pantryQuantity, setPantryQuantity] = useState("")
     const [pantryList, setPantryList] = useState([])
@@ -16,7 +15,6 @@ export default function ManualAdd({ pantry }) {
     const handleQuantity = (event) => {
         setPantryQuantity(event.target.value)
     }
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setPantryItem("");

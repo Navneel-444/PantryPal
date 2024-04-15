@@ -7,8 +7,8 @@ import GroceryList from "./pages/GroceryList/GroceryList"
 function App() {
   return (
     <>
-      <NavBar />
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/inventory" element={<InventoryListPage />}></Route>
           <Route path="/grocery" element={<GroceryList />}></Route>

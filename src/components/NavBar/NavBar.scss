@@ -19,13 +19,14 @@
 
     &__item {
         color: $primary-white;
-        width: 31%;
+        width: 25vw;
         padding: 1rem 0.25rem;
         border: 1px solid black;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 3px;
+        text-decoration: none;
     }
 
     &__item:hover {
