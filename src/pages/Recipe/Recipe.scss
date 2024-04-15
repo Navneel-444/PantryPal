@@ -2,6 +2,8 @@
 @use "../../styles/variables" as *;
 
 .recipe {
+    background-color: $primary-white;
+
     &__title {
         @include mobile-padding;
     }
@@ -17,6 +19,9 @@
         flex-wrap: wrap;
         border: 1px solid black;
         padding: 0.5rem;
+        margin-bottom: 1rem;
+        background-color: $background-grey;
+        width: 100%;
     }
 
     &__info {
@@ -27,10 +32,14 @@
         padding: 0.5rem;
         width: 100%;
         margin-bottom: 0.5rem;
+        background-color: $primary-green;
+        color: $primary-white;
     }
 
     &__name {
         margin: 0;
+        color: white;
+        text-decoration: none;
     }
 
     &__container {
