@@ -4,7 +4,7 @@ import PantryTab from "../../components/PantryTabs/PantryTabs";
 import ManualAdd from "../../components/ManualAdd/ManualAdd";
 
 export default function InventoryListPage() {
-    const inventory = `invertory`;
+    const inventory = `inventory`;
     return (
         <main className="inventory">
             <PantryTab />

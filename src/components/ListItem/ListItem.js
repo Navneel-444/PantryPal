@@ -6,8 +6,8 @@ import { useState } from "react";
 
 export default function ListItem(grocery) {
     const id = `${grocery.grocery.id}`;
-    const [pantryItem, setPantryItem] = useState("")
-    const [pantryQuantity, setPantryQuantity] = useState("")
+    const [pantryItem, setPantryItem] = useState(grocery.grocery.item)
+    const [pantryQuantity, setPantryQuantity] = useState(grocery.grocery.quantity)
 
 
     const handlepantryItem = (event) => {
@@ -41,12 +41,12 @@ export default function ListItem(grocery) {
         <form onSubmit={handleEdit}>
             <li className="list-item" key={grocery.grocery.id}>
                 <section className="list-item__container">
-                    <input onChange={handlepantryItem} value={pantryItem} type="text" className="list-item__name" placeholder={grocery.grocery.item} />
+                    <input onChange={handlepantryItem} value={pantryItem} type="text" className="list-item__name" placeholder={pantryItem} />
                 </section>
                 <section className="list-item__container">
                     <section className="list-item__quantity">
                         <h4 className="list-item__title">QTY:</h4>
-                        <input onChange={handleQuantity} value={pantryQuantity} type="number" className="list-item__qty" placeholder={grocery.grocery.quantity} />
+                        <input onChange={handleQuantity} value={pantryQuantity} type="number" className="list-item__qty" placeholder={pantryQuantity} />
                     </section>
                     <button type="submit" className="list-item__btn"><img src={editbtn} alt="edit button for list item" className="list-item__icon" /></button>
                     <button onClick={handleDelete} className="list-item__btn"> <img src={deletebtn} alt="delete button from list item" className="list-item__icon" /></button>
