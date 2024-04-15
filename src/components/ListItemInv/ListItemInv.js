@@ -4,7 +4,7 @@ import deletebtn from "../../assets/icons/delete-icon.svg"
 import axios from "axios";
 import { useState } from "react";
 
-export default function ListItem(grocery, tab) {
+export default function ListItemInv(grocery, tab) {
     const id = `${grocery.grocery.id}`;
     const [pantryItem, setPantryItem] = useState("")
     const [pantryQuantity, setPantryQuantity] = useState("")
@@ -18,7 +18,7 @@ export default function ListItem(grocery, tab) {
     const handleDelete = async () => {
         try {
             window.location.reload();
-            await axios.delete(`http://localhost:8080/grocery/${id}`);
+            await axios.delete(`http://localhost:8080/inventory/${id}`);
         } catch (error) {
             console.error(error);
         }
@@ -26,7 +26,7 @@ export default function ListItem(grocery, tab) {
     const handleEdit = async () => {
         try {
             window.location.reload();
-            await axios.put(`http://localhost:8080/grocery/${id}`, {
+            await axios.put(`http://localhost:8080/inventory/${id}`, {
                 id: id,
                 item: pantryItem,
                 quantity: pantryQuantity

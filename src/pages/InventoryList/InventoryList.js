@@ -1,14 +1,15 @@
 import "./InventoryList.scss";
-import InventoryItem from '../../components/ListItem/ListItem';
+import InventoryItem from '../../components/ManualAddInv/ManualAddInv';
 import PantryTab from "../../components/PantryTabs/PantryTabs";
 
 export default function InventoryListPage() {
+    const tab = "inventory";
     return (
-        <main className="inventory">
+        <main className="inventory" >
             <PantryTab />
             <h1 className="inventory__title">Inventory List</h1>
             <ul className="inventory__list">
-                <InventoryItem />
+                < InventoryItem pantry={tab} />
             </ul>
         </main>
     )
