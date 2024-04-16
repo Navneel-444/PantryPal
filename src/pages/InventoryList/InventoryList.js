@@ -1,7 +1,6 @@
 import "./InventoryList.scss";
 import InventoryItem from '../../components/ManualAddInv/ManualAddInv';
 import PantryTab from "../../components/PantryTabs/PantryTabs";
-import ManualAdd from "../../components/ManualAdd/ManualAdd";
 
 export default function InventoryListPage() {
     const tab = "inventory";
