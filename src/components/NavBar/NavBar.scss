@@ -6,7 +6,8 @@
     background-color: $background-grey;
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
+    z-index: 0;
 
     &__list {
         display: flex;

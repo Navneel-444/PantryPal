@@ -5,6 +5,7 @@ import InventoryListPage from "./pages/InventoryList/InventoryList";
 import GroceryList from "./pages/GroceryList/GroceryList"
 import RecipePage from './pages/Recipe/Recipe';
 import RecipeDetailsPage from './pages/RecipeDetails/RecipeDetails';
+import DashboardPage from './pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
+          <Route path="/" element={<DashboardPage />}></Route>
           <Route path="/inventory" element={<InventoryListPage />}></Route>
           <Route path="/grocery" element={<GroceryList />}></Route>
           <Route path="/recipes" element={<RecipePage />}></Route>

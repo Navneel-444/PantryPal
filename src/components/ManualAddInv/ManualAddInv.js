@@ -22,7 +22,7 @@ export default function ManualAddInv({ pantry }) {
         setPantryItem("");
         setPantryQuantity("")
         try {
-            const reponse = await axios.post(`http://localhost:8080/${pantry}`, {
+            const reponse = await axios.post(`http://localhost:8080/inventory`, {
                 item: pantryItem,
                 quantity: pantryQuantity
             })
@@ -33,7 +33,7 @@ export default function ManualAddInv({ pantry }) {
     }
     const getGroceryList = async () => {
         try {
-            const res = await axios.get(`http://localhost:8080/${pantry}`)
+            const res = await axios.get(`http://localhost:8080/inventory`)
             setPantryList(res.data);
         } catch (e) {
             console.error(e)

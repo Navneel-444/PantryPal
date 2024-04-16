@@ -1,0 +1,62 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.dashboard {
+
+    &__day {
+        margin: 0.51rem;
+    }
+
+    &__container {
+        display: flex;
+        border: 1px solid $primary-green;
+        justify-content: space-around;
+        margin: 1rem;
+        border-radius: 5px;
+        background-color: $primary-green;
+    }
+
+    &__meal {
+        border: 1px solid $secondary-orange;
+        margin: 1rem;
+        width: 25%;
+        text-align: center;
+        border-radius: 5px;
+        background-color: $primary-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        margin: 0 1rem;
+
+    }
+
+    &__name {
+        text-decoration: none;
+        color: black;
+    }
+
+    &__info {
+        border: 1px solid black;
+        background-color: $primary-white;
+        height: 50%;
+    }
+
+    &__image {
+        margin: 1rem;
+        border: 1px solid black;
+        height: 50%;
+        object-fit: fill;
+    }
+
+    &__delete {
+        border-radius: 10px;
+        width: 50%;
+        border: 1px solid $secondary-orange;
+        background-color: $secondary-orange;
+    }
+}
