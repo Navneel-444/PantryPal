@@ -7,6 +7,10 @@
     border: black solid 1px;
     border-radius: 5px;
     margin: 0 1rem 0.5rem 1rem;
+    background-color: $primary-green;
+    -webkit-box-shadow: 5px 12px 15px -10px #000000;
+    box-shadow: 5px 12px 15px -10px #000000;
+
 
     &__container {
         display: flex;
@@ -28,6 +32,8 @@
         font-size: 1rem;
         border: none;
         color: black;
+        background-color: $primary-green;
+
     }
 
     &__quantity {
@@ -53,16 +59,22 @@
         border: none;
         font-size: 1rem;
         text-align: center;
+        background-color: $primary-green;
+
     }
 
     &__btn {
         padding: 0;
         margin-left: 0.25rem;
+        height: 75%;
         height: 2rem;
         width: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: $secondary-orange;
+        border-radius: 10px;
+        border: 1px solid $secondary-orange;
     }
 
 }

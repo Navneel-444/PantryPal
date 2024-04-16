@@ -6,7 +6,7 @@ export default function NavBar() {
         <nav className="nav-bar">
             <ul className="nav-bar__list">
                 <li><NavLink className="nav-bar__item" to="/recipes">Recipes</NavLink></li>
-                <li><NavLink className="nav-bar__item" to="/dashboard">Dashboard</NavLink></li>
+                <li><NavLink className="nav-bar__item" to="/">Dashboard</NavLink></li>
                 <li><NavLink className="nav-bar__item" to="/grocery">Pantry</NavLink></li>
             </ul>
         </nav>

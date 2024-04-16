@@ -1,0 +1,31 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.details {
+    &__name {
+
+        margin: 1rem;
+    }
+
+    &__img {
+        margin: 1rem;
+        border-radius: 7px;
+    }
+
+    &__list {
+        background-color: $primary-green;
+        margin: 1rem;
+        padding: 1rem;
+        color: white;
+        border-radius: 7px;
+    }
+
+    &__ingredients {
+        margin: 1rem 0;
+    }
+
+    &__item {
+        margin: 0 1rem;
+    }
+
+}
