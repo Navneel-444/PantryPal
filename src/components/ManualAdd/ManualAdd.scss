@@ -1,0 +1,65 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.add {
+    @include mobile-padding;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: end;
+
+
+    &__container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__container:last-of-type {
+        width: 20%;
+        margin-right: 0.5rem;
+        align-items: flex-end;
+    }
+
+    &__label {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+
+    &__title {
+        @include mobile-padding;
+        margin: 0;
+    }
+
+    &__name {
+        width: 100%;
+        border: 1px solid black;
+        padding: 0.5rem;
+        border-right: none;
+        border-radius: 5px 0 0 5px;
+        background-color: $primary-green;
+
+    }
+
+    &__quantity {
+        width: 100%;
+        border: 1px solid black;
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+        padding: 0.5rem;
+        background-color: $primary-green;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        width: 2rem;
+        border-radius: 60px;
+        border: 1px solid black;
+        background-color: $secondary-orange;
+    }
+
+    ::placeholder {
+        color: black;
+    }
+
+}
