@@ -20,11 +20,9 @@ PantryPal+ is an app that makes the hard question "What am i going to eat?" easi
 ### Features
 
 as a user, i want to be able to have daily schedule of what i am going to make durning the week
-as a user, i want to be able to have inventory of food items
-as a user, i want to be able to have inventory of food items that updates after i make a recipes
+as a user, i want to be able to have inventory of food items and edit/delete items
 as a user, i want to be able to add the remaining food items for a recipe to my grocery list
-as a user, i want to be able to have an account to manage my food items
-as a user, i want to be to login to see my favorite recipes
+as a user, i want to be to my favorite recipes
 
 ## Implementation
 
@@ -46,46 +44,44 @@ as a user, i want to be to login to see my favorite recipes
 
 List any external sources of data that will be used in your app.
 
-<!-- `https://spoonacular.com/food-api ` -->
+`https://spoonacular.com/food-api `
 
 ### Sitemap
 
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
-home page
-weekly meal dashboard
+home page/Dashboard
+Grocery list
 food item inventory
 list of recipes
-login
-register
 
 ### Mockups
 
 #### Home Page
 
-![](Mockups/Home_page.jpeg)
+![](./src/assets/mockups/Home_page.jpeg)
 
 #### Grocery List
 
-![](Mockups/Grocery_list.png)
+![](./src/assets/mockups/Grocery_list.png)
 
 #### Inventory List
 
-![](Mockups/Inventory_list.jpeg)
+![](./src/assets/mockups/Inventory_list.jpeg)
 
 #### Recipes Details
 
-![](Mockups/Recipe_Details.png)
+![](./src/assets/mockups/Recipe_Details.png)
 
 #### Recipes list
 
-![](Mockups/Recipe_list.jpeg)
+![](./src/assets/mockups/Recipe_list.jpeg)
 
 ### Data
 
 #### SQL Diagram
 
-![](/PantryPlus_SQL_Schema.png)
+![](./src/assets/PantryPlus_SQL_Schema.png)
 
 ### Endpoints
 
@@ -111,12 +107,19 @@ Camera enable input of food items
 populates items checked off from grocery list
 suggestion of recipes that could be made
 
-feature: login and register
-form requesting basic information (name, username, password etc)
+feature: dashboard
+display saved recipes and be able to delete recipes
 
 bugs fixes
 
 demo day
+
+## How to use
+
+1. create a new schema in mySQL
+2. In the Terminal of the pantrypal-api repo run "npm run migrate"
+3. In the Terminal of the pantrypal-api repo run "npm run"
+4. In the Terminal of the pantrypal repo run "npm run"
 
 ## Nice-to-haves
 
